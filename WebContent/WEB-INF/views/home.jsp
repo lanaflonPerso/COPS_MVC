@@ -8,8 +8,10 @@
 </head>
 <body>
 	<h1>COPS TEST - FIRST PAGE</h1>
-
-	<P>The time on the server is ${serverTime}.</p>
+	<hr>
+	<P>${serverTime}.</p>
+	
+	<p><h2>ORDER PROCESSING</h2><br><a href ="/cops/auth/createaoe"> NEW AOE </a></p>
 
 	<form action="user" method="post">
 		<input type="text" name="userName"><br> 

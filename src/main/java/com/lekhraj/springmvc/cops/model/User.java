@@ -1,4 +1,4 @@
-package com.journaldev.spring.model;
+package com.lekhraj.springmvc.cops.model;
 
 public class User {
 	private String userName;

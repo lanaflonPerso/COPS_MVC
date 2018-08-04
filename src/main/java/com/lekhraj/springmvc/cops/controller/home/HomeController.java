@@ -1,4 +1,4 @@
-package com.journaldev.spring.controller;
+package com.lekhraj.springmvc.cops.controller.home;
 
 import java.text.DateFormat;
 import java.util.Date;
@@ -10,7 +10,8 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.journaldev.spring.model.User;
+import com.lekhraj.springmvc.cops.model.User;
+
 
 @Controller
 public class HomeController {

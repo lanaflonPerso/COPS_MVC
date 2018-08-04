@@ -1,4 +1,4 @@
-package com.lekhraj.springmvc.cops.controller;
+package com.lekhraj.springmvc.cops.controller.auth;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -11,7 +11,6 @@ import com.lekhraj.springmvc.cops.service.AuthManager;
 
 @Controller
 @RequestMapping("/auth")
-//@SessionAttributes("employee")
 public class AuthController {
 
 	@Autowired(required=true)
