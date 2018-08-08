@@ -5,10 +5,12 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.lekhraj.springmvc.cops.service.login.LoginService;
 
 @Controller
+@SessionAttributes("sessionUser")
 public class LoginController {
 	
 	@Autowired
@@ -28,6 +30,7 @@ public class LoginController {
 			return "login";
 		}
 
+		model.put("sessionUser", name);//Setting session variable to make make it avialable on other request.
 		
 		model.put("name", name); System.out.println("name : "+name);
 		model.put("password", password); System.out.println("password : "+password);
