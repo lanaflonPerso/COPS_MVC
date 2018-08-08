@@ -7,16 +7,13 @@
 <title>Home</title>
 </head>
 <body>
-	<h1>COPS TEST - FIRST PAGE</h1>
+	<h1>Welcome to COPS</h1>
 	<hr>
 	<P>${serverTime}.</p>
+	<hr>
+	<P>${user}</p>
 	
-	<p><h2>ORDER PROCESSING</h2><br><a href ="/cops/auth/createaoe"> NEW AOE </a></p>
+	<h2>ORDER PROCESSING</h2><br><a href ="/cops/auth/createaoe"> NEW AOE </a>
 
-	<form action="user" method="post">
-		<input type="text" name="userName"><br> 
-		<input type="submit" value="Login">
-	</form>
-	
 </body>
 </html>
