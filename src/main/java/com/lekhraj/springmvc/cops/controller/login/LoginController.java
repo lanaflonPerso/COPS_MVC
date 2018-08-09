@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import com.lekhraj.springmvc.cops.service.login.LoginService;
 
 @Controller
-@SessionAttributes("sessionUser")
+@SessionAttributes({"sessionUser","validated"})
 public class LoginController {
 	
 	@Autowired
@@ -22,7 +22,7 @@ public class LoginController {
 		return "login";
 	}
 	
-	@RequestMapping(value = "/login", method = RequestMethod.POST)
+	@RequestMapping(value = {"/login"}, method = RequestMethod.POST)
 	public String handleUserLogin(ModelMap model, @RequestParam String name, @RequestParam String password)
 	{
 		if (!loginService.validateUser(name, password)) {
@@ -31,9 +31,17 @@ public class LoginController {
 		}
 
 		model.put("sessionUser", name);//Setting session variable to make make it avialable on other request.
+		model.put("validated", "YES");
 		
 		model.put("name", name); System.out.println("name : "+name);
 		model.put("password", password); System.out.println("password : "+password);
+		return "home";
+	}
+	
+	@RequestMapping(value = {"/home"}, method = RequestMethod.GET)
+	public String home(ModelMap model)
+	{
+		//if (model.get("validated"))
 		return "home";
 	}
 
